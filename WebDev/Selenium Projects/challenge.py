@@ -15,7 +15,7 @@ first_name = 'Buppleup'
 last_name = 'Buntupplepup'
 email = f"{first_name}.{last_name}@doodatoo.org"
 
-#set up fields to enter
+#set up fields and enter
 enter_first = driver.find_element(By.NAME, value='fName')
 enter_first.send_keys(first_name)
 
