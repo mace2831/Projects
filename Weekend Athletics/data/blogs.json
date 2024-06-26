@@ -1,0 +1,17 @@
+[
+    {
+        "title": "This is a blog",
+        "image" : "placeholder.jpg",
+        "body" : "put your text here"
+    },
+    {
+        "title": "This is a blog2",
+        "image" : "placeholder.jpg",
+        "body" : "put your text here"
+    },
+    {
+        "title": "This is a blog3",
+        "image" : "placeholder.jpg",
+        "body" : "put your text here"
+    }
+]

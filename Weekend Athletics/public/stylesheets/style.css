@@ -39,3 +39,8 @@ hr{
   a:active {
     color: #004262;
   }
+
+  .logo_image{
+    padding-right: 20px;
+    z-index: 1000; 
+  }
