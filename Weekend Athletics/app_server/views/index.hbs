@@ -1,16 +1,11 @@
-<!DOCTYPE htms>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Weekend Athletics Main Page</title>
-        <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
-    </head>
+    {{>header}}
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <body>
-        <div id="page">
-            {{> header }}
-            <div id="contents">
-                
-            </div>
+        {{>navbar}}
+        <div class="content">
+        {{{body}}}
         </div>
     </body>
 </html>
