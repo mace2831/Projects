@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html>
-  {{>header}}
+  <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            .card {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 16px;
+                overflow: hidden;
+                text-align: left;
+                width: 100%;
+            }
+            .card img {
+                width: 100%;
+            }
+            .card-container {
+                padding: 16px;
+            }
+            .w3-row-padding {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+            .w3-third {
+                flex: 0 0 calc(33.333% - 32px);
+                max-width: calc(33.333% - 32px);
+                box-sizing: border-box;
+            }
+        </style>
   <body>
+    {{>header}}
     {{{body}}}
   </body>
 </html>

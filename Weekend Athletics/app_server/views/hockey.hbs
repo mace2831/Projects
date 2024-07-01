@@ -1,22 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{{title}}</title>
-        <link rel="stylesheet" href="/stylesheets/style.css">
-    </head>
-    <body>
-        <div id="page">
-        {{> header}}
-        
-
-        <h1 aria-current="page">{{title}}</h1>
-        <p aria-current="page">Welcome to {{title}}</p>
+{{! home.hbs }}
+{{#extend "layout"}}
+  {{#content "body"}}
+    <h1>{{title}}</h1>
+    <p>Welcome to {{title}}</p>
+    <div class="w3-row-padding">
         {{#each blogs}}
-        <h2><a href="/mma">{{this.title}}</a></h2>
-        {{{this.body}}}
-        {{/each}}
+        {{#if @first}}
+        <div class="featured">
+            <div class="card">
+                <img src="images/{{this.image}}" alt="Blog Image">
+                <div class="card-container">
+                    <h2><a href="/mma">{{this.title}}</a></h2>
+                    {{{this.body}}}
+                </div>
+            </div>
         </div>
-    </body>
-</html>
-
+        {{else}}
+        <div class="w3-third">
+            <div class="card">
+                <img src="images/{{this.image}}" alt="Blog Image">
+                <div class="card-container">
+                    <h2><a href="/mma">{{this.title}}</a></h2>
+                    {{{this.body}}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+  {{/content}}
+{{/extend}}

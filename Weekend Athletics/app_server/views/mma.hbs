@@ -34,32 +34,45 @@
                 gap: 24px;
             }
             .w3-third {
-                flex: 0 0 30%;
-                max-width: 30%;
+                flex: 0 0 calc(33.333% - 32px);
+                max-width: calc(33.333% - 32px);
                 box-sizing: border-box;
             }
         </style>
     </head>
     <body>
-        
+        {{> header}}
         <div id="page">
-            {{> header}}
+            
         
             <div class="container">
                 <h1 style="color: black" aria-current="page">MMA</h1>
                 <p style="color:black" aria-current="page">All things combat sports!</p>
-                <div class="w3-row-padding">
+                 <div class="w3-row-padding">
                     {{#each blogs}}
+                    {{#if @first}}
+                    <div class="featured">
+                        <div class="card">
+                            <img src="images/{{this.image}}" alt="Blog Image">
+                            <div class="card-container">
+                                <h2><a href="/mma">{{this.title}}</a></h2>
+                                {{{this.body}}}
+                                <h3 style="text-align:right">-{{this.author}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
                     <div class="w3-third">
                         <div class="card">
                             <img src="images/{{this.image}}" alt="Blog Image">
                             <div class="card-container">
-                                <h2 style="text-align: center"><a href="/mma">{{this.title}}</a></h2>
+                                <h2><a href="/mma">{{this.title}}</a></h2>
                                 {{{this.body}}}
-                                <h2 style="text-align: right">-{{this.author}}</h2>
+                                <h3 style="text-align:right">-{{this.author}}</h3>
                             </div>
                         </div>
                     </div>
+                    {{/if}}
                     {{/each}}
                 </div>
             </div>
