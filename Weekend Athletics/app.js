@@ -14,6 +14,8 @@ var e_sportsRouter = require('./app_server/routes/e_sports');
 var footballRouter = require('./app_server/routes/football');
 var hockeyRouter = require('./app_server/routes/hockey');
 var mmaRouter = require('./app_server/routes/mma');
+var soccerRouter = require('./app_server/routes/soccer');
+var othersRouter = require('./app_server/routes/others');
 
 var app = express();
 
@@ -39,6 +41,8 @@ app.use('/e_sports', e_sportsRouter);
 app.use('/football', footballRouter);
 app.use('/hockey', hockeyRouter);
 app.use('/mma', mmaRouter);
+app.use('/soccer', soccerRouter);
+app.use('/others', othersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

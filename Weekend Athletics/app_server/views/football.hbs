@@ -1,5 +1,22 @@
-{{> header}}
-{{>navbar}}
-<link rel="stylesheet" href="/public/stylesheets/style.css">
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div id="page">
+        {{> header}}
+        
+
+        <h1 aria-current="page">{{title}}</h1>
+        <p aria-current="page">Welcome to {{title}}</p>
+        {{#each blogs}}
+        <h2><a href="/mma">{{this.title}}</a></h2>
+        {{{this.body}}}
+        {{/each}}
+        </div>
+    </body>
+</html>
+
