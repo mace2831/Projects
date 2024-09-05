@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Block Rufus AI Assistant",
+    "version": "1.0",
+    "description": "Blocks the Amazon Rufus AI assistant pop-up",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "matches": ["*://www.amazon.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }

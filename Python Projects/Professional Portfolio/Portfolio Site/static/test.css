@@ -1,0 +1,60 @@
+.oswald-medium {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, white, black, white) 1;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar-title h1{
+    font-size: 56px;
+}
+
+.navbar-title h4{
+    font-size: 24px;
+}
+.navbar-title h1, .navbar-title h4 {
+    margin: 0;
+    padding-right: 10px; /* Adjust this as needed */
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    align-items: flex-end;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    transition: 0.1s;
+    color: blue;
+}
+
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.container h2{
+display: flex;
+
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, white, black, white) 1;
+}
