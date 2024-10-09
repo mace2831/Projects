@@ -2,12 +2,15 @@
     font-family: "Oswald", sans-serif;
     font-weight: 600;
 }
-
+body{
+font-family: 'Oswald', sans-serif;
+}
 .navbar {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-around;
+
     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     border-bottom-width: 2px;
     border-bottom-style: solid;
@@ -43,18 +46,20 @@
     transition: 0.1s;
     color: blue;
 }
+.navbar a.active{
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, white, black, white) 1;
+}
 
 .container {
 display: flex;
 align-items: center;
 justify-content: center;
+flex-direction: column;
+}
+.container div{
+  padding-top: 30px;
 }
 
-.container h2{
-display: flex;
 
-    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(to right, white, black, white) 1;
-}
