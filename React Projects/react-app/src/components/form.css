@@ -1,0 +1,12 @@
+.gen-info {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+label {
+    margin-left: 20px;
+}
+
+input {
+    margin-left: 10px;
+  }
